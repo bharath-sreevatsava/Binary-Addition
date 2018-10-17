@@ -26,11 +26,14 @@ public class Binary {
 
 		int carry = 0;
 		for (int i = 0; i < ar3.length; i++) {
-			if (ar1[i] + ar2[i] <= 1) {
+			if (ar1[i] + ar2[i]+ carry <= 1) {
 				ar3[i] = ar1[i] + ar2[i] + carry;
 				carry = 0;
-			} else {
-				ar3[i] = carry;
+			} else if(ar1[i] + ar2[i]+ carry == 2){
+				ar3[i] = 0;
+				carry = 1;
+			}else if(ar1[i] + ar2[i]+ carry == 3){
+				ar3[i] = 1;
 				carry = 1;
 			}
 		}
