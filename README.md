@@ -14,10 +14,7 @@ public class Binary {
 		int[] ar1 = new int[10];
 		int[] ar2 = new int[10];
 		int[] ar3 = new int[10];
-		for (int i = 0; i < 10; i++) {
-			ar1[i] = ar2[i] = ar3[i] = 0;
-		}
-
+		
 		int n = 0;
 		while (a != 0 || b != 0) {
 			ar1[n] = a % 10;
